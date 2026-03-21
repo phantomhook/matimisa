@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celebrating Matilde Alvillar Olague</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f8f5ef;
+      --bg-soft: #f3eee5;
+      --surface: rgba(255, 255, 255, 0.78);
+      --text: #2b2a28;
+      --muted: #726a63;
+      --gold: #b08d57;
+      --gold-deep: #947242;
+      --line: rgba(176, 141, 87, 0.22);
+      --shadow: 0 18px 50px rgba(34, 28, 20, 0.08);
+      --radius-lg: 28px;
+      --container: 1180px;
+      --transition: 300ms ease;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #fbf8f3 0%, #f7f2ea 100%);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; margin: 0 auto; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--container), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section { position: relative; padding: 100px 0; }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--gold-deep);
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      font-weight: 500;
+      line-height: 1.1;
+      margin: 0 0 14px;
+    }
+
+    /* NAV */
+    .site-nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(248, 245, 239, 0.85);
+      border-bottom: 1px solid rgba(176, 141, 87, 0.1);
+    }
+
+    .site-nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      min-height: 72px;
+    }
+
+    .brand {
+      font-family: "Playfair Display", serif;
+      font-size: 0.9rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold-deep);
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { font-size: 0.9rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; transition: color var(--transition); }
+    .nav-links a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero { padding: 40px 0; }
+    .hero-frame {
+      border-radius: 34px;
+      background: var(--white);
+      border: 1px solid rgba(176, 141, 87, 0.16);
+      box-shadow: var(--shadow);
+      padding: clamp(16px, 2vw, 32px);
+      display: flex; flex-direction: column; align-items: center;
+    }
+
+    .hero-graphic {
+      width: auto; max-width: 100%; max-height: 80vh;
+      border-radius: 20px; object-fit: contain;
+      animation: fadeUp 1s ease both;
+    }
+
+    /* RSVP */
+    .rsvp-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .rsvp-intro { padding-right: 20px; display: flex; flex-direction: column; justify-content: center; }
+    .rsvp-card { background: #fff; padding: 20px; border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .embed-shell { min-height: 520px; }
+    .embed-shell iframe { width: 100%; min-height: 520px; border: 0; }
+
+    /* STORY (Cleaned up background) */
+    .story {
+      background: linear-gradient(rgba(248, 245, 239, 0.94), rgba(248, 245, 239, 0.96)),
+                  url("image_d2b072.jpg") center 20% / cover no-repeat fixed;
+    }
+
+    .story-header { text-align: center; margin-bottom: 80px; }
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+    .story-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(176, 141, 87, 0.1);
+      border-radius: 24px; padding: 35px;
+      transition: transform var(--transition);
+    }
+    .story-card h3 { font-family: "Playfair Display", serif; font-size: 1.5rem; margin-bottom: 15px; font-weight: 500; }
+    .story-card p { line-height: 1.8; color: var(--muted); font-size: 1rem; margin: 0; }
+
+    /* FOOTER/KEEPSAKE */
+    .story-footer { margin-top: 80px; text-align: center; }
+    .keepsake-btn {
+      display: inline-block;
+      padding: 18px 40px;
+      background: #fff;
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      color: var(--gold-deep);
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      transition: all var(--transition);
+      box-shadow: 0 10px 20px rgba(176, 141, 87, 0.1);
+    }
+    .keepsake-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(176, 141, 87, 0.2);
+      border-color: var(--gold-deep);
+    }
+
+    .site-footer { padding: 60px 0; text-align: center; color: var(--muted); font-size: 0.9rem; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 980px) {
+      .rsvp-wrap, .story-grid { grid-template-columns: 1fr; }
+      .section { padding: 60px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="container site-nav-inner">
+      <a href="#hero" class="brand">Matilde Alvillar Olague</a>
+      <div class="nav-links">
+        <a href="#rsvp">RSVP</a>
+        <a href="#story">Her Story</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-frame">
+          <img src="WEB HERO.png" alt="Celebrating Matilde" class="hero-graphic" />
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section">
+      <div class="container">
+        <div class="rsvp-wrap">
+          <div class="rsvp-intro">
+            <span class="eyebrow">Response Requested</span>
+            <h2 class="section-title">Kindly RSVP</h2>
+            <p style="color: var(--muted); line-height: 1.8; font-size: 1.1rem;">
+              We would be honored to have you join us for this celebration. Please confirm your attendance so we may prepare for your arrival.
+            </p>
+          </div>
+          <div class="rsvp-card">
+            <div class="embed-shell">
+              <iframe data-tally-src="https://tally.so/embed/dWPe8A?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="section story">
+      <div class="container">
+        <div class="story-header">
+          <span class="eyebrow">Our Matriarch</span>
+          <h2 class="section-title">A Legacy of Purpose</h2>
+          <p style="color: var(--muted); font-size: 1.1rem;">Matilde’s life touched generations. Her spirit of leadership and radical kindness remains our guiding light.</p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card">
+            <h3>The Heart of Palomas</h3>
+            <p>Known affectionately as "Tillie," she was the eldest of 11 children. Her early life was defined by responsibility and a deep commitment to family and community.</p>
+          </article>
+          <article class="story-card">
+            <h3>Vision & Industry</h3>
+            <p>An entrepreneur at heart, she founded grocery stores, pharmacies, and even designed fashion for export, always leading with discipline and creativity.</p>
+          </article>
+          <article class="story-card">
+            <h3>Radical Kindness</h3>
+            <p>She opened her own classrooms and ensured children were fed. She taught us that true leadership means stepping in where others see obstacles.</p>
+          </article>
+          <article class="story-card">
+            <h3>A Living Legacy</h3>
+            <p>Matilde leaves behind a vast family including 11 grandchildren and 30 great-grandchildren. Her spirit of "enlightened community" lives on in each of them.</p>
+          </article>
+        </div>
+
+        <div class="story-footer">
+          <a href="2026 Mati.pdf" target="_blank" class="keepsake-btn">Memorial Keepsake</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      With gratitude for the life and legacy of Matilde Alvillar Olague.
+    </div>
+  </footer>
+
+  <script async src="https://tally.so/widgets/embed.js"></script>
+
+</body>
+</html>
