@@ -374,6 +374,82 @@
       margin: 0;
     }
 
+    /* OBITUARY */
+    .obituary {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.76), rgba(255,255,255,0.9));
+    }
+
+    .obituary-shell {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid rgba(176, 141, 87, 0.14);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      padding: clamp(28px, 5vw, 56px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .obituary-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.36), transparent 24%),
+        radial-gradient(circle at top right, rgba(201, 168, 106, 0.08), transparent 22%);
+    }
+
+    .obituary-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .obituary-header {
+      text-align: center;
+      margin-bottom: 34px;
+      padding-bottom: 26px;
+      border-bottom: 1px solid rgba(176, 141, 87, 0.18);
+    }
+
+    .obituary-name {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500;
+      line-height: 1.12;
+      margin: 0 0 10px;
+      color: var(--text);
+    }
+
+    .obituary-meta {
+      color: var(--gold-deep);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .obituary-body {
+      color: #4a443d;
+      font-size: 1.03rem;
+      line-height: 1.95;
+      column-gap: 42px;
+    }
+
+    .obituary-body p {
+      margin: 0 0 22px;
+    }
+
+    .obituary-source {
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(176, 141, 87, 0.18);
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+      line-height: 1.8;
+    }
+
     /* FOOTER / KEEPSAKE */
     .story-footer {
       margin-top: 80px;
@@ -547,8 +623,14 @@
         font-size: 0.95rem;
       }
 
-      .story-card {
+      .story-card,
+      .obituary-shell {
         padding: 24px;
+      }
+
+      .obituary-body {
+        font-size: 1rem;
+        line-height: 1.85;
       }
 
       .music-toggle {
@@ -578,6 +660,7 @@
       <div class="nav-links">
         <a href="#rsvp">RSVP</a>
         <a href="#story">Her Story</a>
+        <a href="#obituary">Obituary</a>
       </div>
     </div>
   </nav>
@@ -672,6 +755,73 @@
           <a href="2026 Mati.pdf" target="_blank" rel="noopener noreferrer" class="keepsake-btn">
             Memorial Keepsake
           </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="obituary" class="section obituary audio-zone" data-volume="0.20">
+      <div class="container">
+        <div class="obituary-shell">
+          <div class="obituary-inner">
+            <div class="obituary-header">
+              <span class="eyebrow">Obituary</span>
+              <h2 class="obituary-name">Matilde Olague Armendariz Viuda de Alvillar</h2>
+              <div class="obituary-meta">
+                Palomas, Mexico — July 5, 1923 – December 27, 2021
+              </div>
+            </div>
+
+            <div class="obituary-body">
+              <p>
+                Matilde (Tillie) Olague Alvillar, philanthropist, entrepreneur, and community builder who was a change-maker in the bordertown of Puerto Palomas, died on Monday, December 27, in her son's home. She was 98 years old and was preceded in death by her husband Arnulfo (April 22, 1998), son José Fransisco (July 25, 2004), and two grandchildren, Cristina Durant (February 6, 1971) and Christopher Ritter Alvillar (May 11, 2015).
+              </p>
+
+              <p>
+                Mrs. Alvillar was one of the defining and endearing figures of the border town during the 20th century. As Matilde was affectionately called, Tillie was a community builder who dedicated her life to the service of Puerto Palomas. In 1943, Matilde married Arnulfo at 20 years old. They began building a business portfolio that included restaurant bars, a grocery store, a beauty salon, a pharmacy, a store carrying Mexico's finest products, and a liquor distributorship.
+              </p>
+
+              <p>
+                Tillie used her creativity to design modern Mexican dresses for exporting to the USA. She penned two columns—Border Ballyhoo and South of the Border—for two newspapers in Deming, New Mexico. Matilde was also the local chairman of the political party PRI and headed the field office of the Federal Treasury.
+              </p>
+
+              <p>
+                She found ways to support the indigent elderly by finding their talent and developing products that sold with all profits returned to the developer. She found low-rent or rent-free places for these individuals and looked after their basic medical needs. Tillie also believed in public education. She would find ways to close gaps resulting from non-compulsory attendance laws in Mexico.
+              </p>
+
+              <p>
+                Mrs. Alvillar would find locations to open and run a school when children did not have a seat in the elementary public school in town. She contracted the teachers, provided hot breakfast for students, and developed fundraisers to support salaries. As head of the political party committee, Matilde developed programs that invited the public to become registered voters. She also developed education programs on ballot issues and created engaging civic activities to generate enthusiasm for developing a more enlightened community.
+              </p>
+
+              <p>
+                Tillie was active in the PTA of Columbus, New Mexico Elementary School, where her children attended. Mrs. Alvillar was very involved in the Deming, New Mexico Chapter of the Pan American Round Table. Even in her later years, she served as an officer of the local Rotary Club.
+              </p>
+
+              <p>
+                Survivors include four of her five children: Dr. Rosa E. Apodaca, an author, education leader, a cabinet-level school administrator in various public school districts nationwide, and former executive director of an academic think tank; Pedro Arnulfo Alvillar (wife Patricia), a businessman, entrepreneur, and former mayor of Puerto Palomas; Gloria Alvillar (husband Ted Earle), a city of Tucson administrator and university dean; and Dr. Ivonne Durant, a deputy superintendent and cabinet-level public school administrator in two major Texas school districts.
+              </p>
+
+              <p>
+                Matilde also leaves a great legacy with 16 grandchildren, 20 great-grandchildren, and two great-great-grandchildren in Mexico and throughout the United States.
+              </p>
+
+              <p>
+                Matilde was the first-born of 13 children of Luis Olague, one of the first industrialists and a philanthropist in Ciudad Juarez, Chihuahua, and Elodia Armendáriz. Matilde was fluent in English and Spanish. She attended schools in Ciudad Juarez and studied in El Paso, Texas, at Radford School for Girls and Palmore Business College. Matilde worked in her father's business and was very active in the Ciudad Juarez Red Cross. She was elected to represent the organization as its queen.
+              </p>
+
+              <p>
+                Matilde is survived by her younger brother, Jesús Bernardino Olague, and two sisters, Magdalena Olague Márquez and Guadalupe Olague of Ciudad Juarez, Chihuahua. Olague siblings that predeceased her were Roberto, Rodólfo, Raúl, Rubén, Norberto, Armando, Felipe, Abraham, and Maria de Lourdes.
+              </p>
+
+              <p>
+                Her family and friends were in awe of Matilde's beautiful soul and her grace. May she rest in peace.
+              </p>
+            </div>
+
+            <div class="obituary-source">
+              Posted online on January 07, 2022<br />
+              Published in Silver City Sun News
+            </div>
+          </div>
         </div>
       </div>
     </section>
